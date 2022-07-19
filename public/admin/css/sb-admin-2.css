@@ -11319,3 +11319,7 @@ body.sidebar-toggled footer.sticky-footer {
   pointer-events: none;
 }
 
+.dark-light i.layout{
+  opacity: 0;
+  pointer-events: none;
+}

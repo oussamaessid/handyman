@@ -42,6 +42,7 @@
 
                 <!-- Topbar -->
                 @include('common.header')
+                
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->

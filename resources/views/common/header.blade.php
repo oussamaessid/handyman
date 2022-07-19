@@ -5,7 +5,7 @@
         <i class="fa fa-bars"></i>
     </button>
 
-    <!-- Topbar Search -->
+    <!-- Topbar Search 
     <form
         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
         <div class="input-group">
@@ -17,7 +17,7 @@
                 </button>
             </div>
         </div>
-    </form>
+    </form> -->
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -65,8 +65,8 @@
         <span class="caret"></span>
     </a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="lang/en"><img src="{{asset('images/flag/moon.png')}}" width="25px"> English</a>
-        <a class="dropdown-item" href="lang/fr"><img src="{{asset('images/flag/sun.png')}}" width="25px"> Français</a>
+        <a class="dropdown-item" href="lang/en"><img src="{{asset('images/flag/moon.png')}}" width="25px"> moon</a>
+        <a class="dropdown-item" href="lang/fr"><img src="{{asset('images/flag/sun.png')}}" width="25px"> sum</a>
     </div>
 </li>
     </li>
