@@ -22,7 +22,19 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('admin/css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/css/sb-admin-2.css')}}" rel="stylesheet">
 
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -93,6 +105,18 @@
             </div>
         </div>
     </div>
+<div>
+
+<script>
+    $(document).ready(function(){
+        $("#selector").change(function(){
+            $("body").toggleClass("bg-secondary");
+            $("nav").toggleClass("navbar-dar bg-dark");
+            $(".custom-control-label").toggleClass("text-white");
+        });
+    });
+    <script>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>

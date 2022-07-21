@@ -54,3 +54,21 @@
   });
 
 })(jQuery); // End of use strict
+
+
+
+const chk = document.getElementById('chk');
+const body = document.querySelector('body');
+
+chk.addEventListener('click', function(){
+    this.classList.chk('bi-moon');
+    if(this.classList.chk('bi-brightness-high-fill')){
+        body.style.background = 'white';
+        body.style.color = 'black';
+        body.style.transition = '2s';
+    }else{
+        body.style.background = 'black';
+        body.style.color = 'white';
+        body.style.transition = '2s';
+    }
+});

@@ -46,31 +46,18 @@
             </div>
         </li>
 
-        
-        <li>
-        @php $locale = session()->get('locale'); @endphp
-<li class="nav-item dropdown">
-    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-        @switch($locale)
-            @case('en')
-            <img src="{{asset('images/flag/moon.png')}}" width="25px"> 
-            @break
-            @case('fr')
-            <img src="{{asset('images/flag/sun.png')}}" width="25px"> 
-            @break
-            @default
-            <img src="{{asset('images/flag/sun.png')}}" width="25px">
-        @endswitch
-        <span class="caret"></span>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="lang/en"><img src="{{asset('images/flag/moon.png')}}" width="25px"> moon</a>
-        <a class="dropdown-item" href="lang/fr"><img src="{{asset('images/flag/sun.png')}}" width="25px"> sum</a>
-    </div>
+<li class="custom-control custon-switch mr-5">
+     <input type="checkbox" class="checkbox" id="selector" />
+	    <label class="label" for="selector">
+		    <i class="fas fa-moon"></i>
+		    <i class="fas fa-sun"></i>
+		    <div class="ball"></div>
+	   </label>
+
 </li>
-    </li>
-        <!-- Nav Item - Alerts -->
+
+    
+       <!-- Nav Item - Alerts -->
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -191,7 +178,7 @@
        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
         @switch($locale)
             @case('en')
-            <img src="{{asset('images/flag/usa.png')}}" width="25px"> English
+            <img src="{{asset('images/flag/usa.png')}}" width="25px" >  English
             @break
             @case('fr')
             <img src="{{asset('images/flag/fr.png')}}" width="25px"> Français
