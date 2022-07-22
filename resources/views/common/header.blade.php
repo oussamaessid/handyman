@@ -47,10 +47,10 @@
         </li>
 
 <li class="custom-control custon-switch mr-5">
-     <input type="checkbox" class="checkbox" id="selector" />
-	    <label class="label" for="selector">
-		    <i class="fas fa-moon"></i>
+     <input type="checkbox" class="checkbox" id="darkSwitch" />
+	    <label class="label" for="darkSwitch">
 		    <i class="fas fa-sun"></i>
+		    <i class="fas fa-moon"></i>
 		    <div class="ball"></div>
 	   </label>
 

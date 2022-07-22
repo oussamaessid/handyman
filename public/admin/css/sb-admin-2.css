@@ -72,7 +72,6 @@ body.dark {
 	justify-content: space-between;
 	padding: 5px;
 	position: relative;
-  margin-right: 20px;
   margin-top: 20px;
 	height: 26px;
 	width: 50px;
@@ -11337,50 +11336,23 @@ footer.sticky-footer .copyright {
   font-size: 0.8rem;
 }
 
-body.sidebar-toggled footer.sticky-footer {
-  width: 100%;
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
 }
 
-.nav-bar .darkLight-searchBox{
-  display: flex;
-  align-items: center;
+[data-theme="dark"] .bg-black {
+  background-color: #fff !important;
 }
 
-.darkLight-searchBox .dark-light,
-.darkLight-searchBox .searchToggle{
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
+[data-theme="dark"] .bg-dark {
+  background-color: #eee !important;
 }
 
-.dark-light i,
-.searchToggle i{
-  position: absolute;
-  color: var(--text-color);
-  font-size: 22px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+[data-theme="dark"] .bg-light {
+  background-color: #222 !important;
 }
 
-.dark-light i.sun{
-  opacity: 0;
-  pointer-events: none;
-}
-
-.dark-light.active i.sun{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.dark-light.active i.moon{
-  opacity: 0;
-  pointer-events: none;
-}
-
-.dark-light i.layout{
-  opacity: 0;
-  pointer-events: none;
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
 }
