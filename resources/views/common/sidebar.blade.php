@@ -38,8 +38,8 @@
         <div id="collapsecategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">gestion Category:</h6>
-                <a class="collapse-item" href="buttons.html">liste category</a>
-                <a class="collapse-item" href="cards.html">ajouter category</a>
+                <a class="collapse-item" href="category">liste category</a>
+                <a class="collapse-item" href="category/create">ajouter category</a>
             </div>
         </div>
     </li>

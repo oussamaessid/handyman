@@ -15,7 +15,7 @@ use App\Http\Livewire\CategorieComponent;
 */
 
 
-Route::resource('/contact', App\Http\Controllers\ContactController::class);
+Route::resource('/category', App\Http\Controllers\CategoryController::class);
 Route::resource('/service', App\Http\Controllers\ServiceController::class);
 
 

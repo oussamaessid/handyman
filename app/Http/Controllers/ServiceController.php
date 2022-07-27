@@ -44,7 +44,7 @@ class ServiceController extends Controller
   
     public function update(Request $request, $id)
     {
-        $service = Cervice::find($id);
+        $service = Service::find($id);
         $input = $request->all();
         $service->update($input);
         return redirect('service')->with('flash_message', 'Service Updated!');  

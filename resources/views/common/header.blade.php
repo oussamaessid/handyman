@@ -50,7 +50,7 @@
      <input type="checkbox" class="checkbox" id="darkSwitch" />
 	    <label class="label" for="darkSwitch">
 		    <i class="fas fa-sun"></i>
-		    <i class="fas fa-noom"></i>
+		    <i class="fas fa-moon"></i>
 		    <div class="ball"></div>
 	   </label>
 
