@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\CategorieComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::resource('/contact', App\Http\Controllers\ContactController::class);
+Route::resource('/service', App\Http\Controllers\ServiceController::class);
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,4 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
