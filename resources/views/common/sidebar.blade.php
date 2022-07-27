@@ -29,48 +29,50 @@
 
      <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecategory"
+            aria-expanded="true" aria-controls="category">
           <!--  <i class="fas fa-fw fa-cog"></i>-->
             <i class="fas fa-fw fa-cog"></i>
             <span>Category</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapsecategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <h6 class="collapse-header">gestion Category:</h6>
+                <a class="collapse-item" href="buttons.html">liste category</a>
+                <a class="collapse-item" href="cards.html">ajouter category</a>
             </div>
         </div>
     </li>
 
-        <!-- Nav Item - Pages Collapse Menu -->
+
+
+    <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSubCategory"
+            aria-expanded="true" aria-controls="collapsePagestw">
             <i class="fas fa-fw fa-wrench"></i>
             <span>SubCategory</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseSubCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <h6 class="collapse-header">gestion subCategory:</h6>
+                <a class="collapse-item" href="buttons.html">liste subCategory</a>
+                <a class="collapse-item" href="cards.html">ajouter subCategory</a>
             </div>
         </div>
     </li>
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseservice"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-folder"></i>
             <span>Service</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseservice" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <h6 class="collapse-header">gestion service:</h6>
+                <a class="collapse-item" href="service">liste services</a>
+                <a class="collapse-item" href="service/create">ajouter service</a>
             </div>
         </div>
     </li>
@@ -82,14 +84,14 @@
     </li>
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-        <a class="nav-link collapsed" href="service" data-toggle="collapse" data-target="#collapseTwo"
+        <a class="nav-link collapsed" href="service" data-toggle="collapse" data-target="#collapseprovider"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-table"></i>
             <span>Provider</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseprovider" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
+                <h6 class="collapse-header">gestion services:</h6>
                 <a class="collapse-item" href="service/create">Buttons</a>
                 <a class="collapse-item" href="cards.html">Cards</a>
             </div>
@@ -103,19 +105,19 @@
     </li>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHandyman"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fa fa-users" aria-hidden="true"></i>
             <span>handyman</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+        <div id="collapseHandyman" class="collapse" aria-labelledby="headingamir"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">Colors</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
+                <a class="collapse-item" href="utilities-color.html">hand</a>
+                <a class="collapse-item" href="utilities-border.html">hand</a>
+                <a class="collapse-item" href="utilities-animation.html">hand</a>
+                <a class="collapse-item" href="utilities-other.html">hand</a>
             </div>
         </div>
     </li>
