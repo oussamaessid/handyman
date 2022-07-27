@@ -15,6 +15,8 @@ use App\Http\Livewire\CategorieComponent;
 */
 
 
+Route::resource('/provider', App\Http\Controllers\ProviderController::class);
+Route::resource('/subcategory', App\Http\Controllers\SubCategoryController::class);
 Route::resource('/category', App\Http\Controllers\CategoryController::class);
 Route::resource('/service', App\Http\Controllers\ServiceController::class);
 

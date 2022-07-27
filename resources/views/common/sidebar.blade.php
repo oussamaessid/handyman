@@ -56,8 +56,8 @@
         <div id="collapseSubCategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">gestion subCategory:</h6>
-                <a class="collapse-item" href="buttons.html">liste subCategory</a>
-                <a class="collapse-item" href="cards.html">ajouter subCategory</a>
+                <a class="collapse-item" href="subcategory">liste subCategory</a>
+                <a class="collapse-item" href="subcategory/create">ajouter subCategory</a>
             </div>
         </div>
     </li>
@@ -92,8 +92,8 @@
         <div id="collapseprovider" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">gestion services:</h6>
-                <a class="collapse-item" href="service/create">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <a class="collapse-item" href="provider">liste providers</a>
+                <a class="collapse-item" href="provider/create">ajouter provider</a>
             </div>
         </div>
     </li>
