@@ -20,7 +20,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                 <div class="card-body">0</div>

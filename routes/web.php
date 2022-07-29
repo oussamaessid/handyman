@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\ContactController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CategorieComponent;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,8 @@ Route::resource('/provider', App\Http\Controllers\ProviderController::class);
 Route::resource('/subcategory', App\Http\Controllers\SubCategoryController::class);
 Route::resource('/category', App\Http\Controllers\CategoryController::class);
 Route::resource('/service', App\Http\Controllers\ServiceController::class);
+Route::resource('/user', \App\Http\Controllers\Auth\UserMan\user::class);
+
 
 
 Route::get('/', function () {

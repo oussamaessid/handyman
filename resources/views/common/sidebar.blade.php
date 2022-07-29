@@ -133,9 +133,19 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <span>Users</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseuser"
+           aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <span>user</span>
+        </a>
+        <div id="collapseuser" class="collapse" aria-labelledby="headingamir"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Custom Utilities:</h6>
+                <a class="collapse-item" href="user">liste user</a>
+                <a class="collapse-item" href="user/register">ajouter user</a>>
+            </div>
+        </div>
     </li>
 
     <!-- Nav Item - Tables -->
