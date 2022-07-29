@@ -19,6 +19,7 @@
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>description</th>
+                                        <th>ban</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -28,6 +29,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->address }}</td>
+                                        <td>{{ $item->ban }}</td>
 
 
                                         <td>
