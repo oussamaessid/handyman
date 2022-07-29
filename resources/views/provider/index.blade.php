@@ -29,7 +29,12 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->address }}</td>
-                                        <td>{{ $item->ban }}</td>
+                                        <td>
+                                            @if($item->ban =='0')
+                                                <label class="py-2 px-3 badge btn-primary">Non bloqué</label>
+                                        @elseif($item->ban =='1')
+                                                <label class="py-2 px-3 badge btn-danger">bloqué</label>
+                                            @endif
 
 
                                         <td>

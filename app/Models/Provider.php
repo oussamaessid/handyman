@@ -9,5 +9,5 @@ class Provider extends Model
 {
     protected $table = 'provider';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'address','ban'];
+    protected $fillable = ['name', 'address'];
 }

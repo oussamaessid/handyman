@@ -29,7 +29,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::group(['middleware'=>['auth','isUser']],function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
