@@ -21,23 +21,25 @@ Route::resource('/subcategory', App\Http\Controllers\SubCategoryController::clas
 Route::resource('/category', App\Http\Controllers\CategoryController::class);
 Route::resource('/service', App\Http\Controllers\ServiceController::class);
 Route::resource('/user', \App\Http\Controllers\Auth\UserMan\user::class);
-
+//Route::get('user-register','App\Http\Controllers\Admin\RegisteredController@index');
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
-Route::group(['middleware'=>['auth','isUser']],function(){
-    Route::get('/', function () {
-        return view('welcome');
-    });
-});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/amir', function (){
+//   return view('provider.create') ;
+//});
+Route::group(['middleware'=>['auth','isAdmin']],function (){
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
 
-Auth::routes();
-
+});
 
 
 

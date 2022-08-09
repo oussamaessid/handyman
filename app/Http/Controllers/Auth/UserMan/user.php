@@ -15,7 +15,7 @@ class user extends Controller
      */
     public function index()
     {
-        $users = users::all();
+        $users = \App\Models\User::all();
         return view ('user.index')->with('user', $users);
     }
 

@@ -16,9 +16,10 @@
                             <table class="table">
                                 <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>id</th>
                                     <th>Name</th>
                                     <th>email</th>
+                                    <th>role</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -28,6 +29,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->email }}</td>
+                                        <td>{{ $item->role_as }}</td>
 
 
                                         <td>
