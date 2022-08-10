@@ -20,8 +20,9 @@ Route::resource('/provider', App\Http\Controllers\ProviderController::class);
 Route::resource('/subcategory', App\Http\Controllers\SubCategoryController::class);
 Route::resource('/category', App\Http\Controllers\CategoryController::class);
 Route::resource('/service', App\Http\Controllers\ServiceController::class);
-Route::resource('/user', \App\Http\Controllers\Auth\UserMan\user::class);
 //Route::get('user-register','App\Http\Controllers\Admin\RegisteredController@index');
+//Route::resource('/user', \App\Http\Controllers\Admin\RegisteredController::class);
+
 
 
 Route::get('/', function () {
