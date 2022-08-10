@@ -8,7 +8,7 @@
 
 
         <div class="card-body">
-        <h5 class="card-title">Name : {{ $provider->name }}</h5>
+        <p class="card-title">Name : {{ $provider->name }}</p>
         <p class="card-text">email : {{ $provider->email }}</p>
 
   </div>

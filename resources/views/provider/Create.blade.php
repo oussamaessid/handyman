@@ -9,13 +9,11 @@
         {!! csrf_field() !!}
         <label>Name</label></br>
         <input type="text" name="name" id="name" class="form-control"></br>
-        <label>Address</label></br>
+        <label>email</label></br>
         <input type="text" name="email" id="email" class="form-control"></br>
           <input type="password" name="password" id="password" class="form-control"></br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
-
-
 
   </div>
 </div>
