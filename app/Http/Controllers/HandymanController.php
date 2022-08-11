@@ -26,22 +26,12 @@ class HandymanController extends Controller
             'name' => 'required|string',
             'email' => 'required|string|unique:users,email',
             'password' => 'required|string|confirmed',
-
-
-
-
-
         ]);
-
-
         User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
             'role_as' => $request->role_as ?? 'handyman',
-
-
-
         ]);
 
 
