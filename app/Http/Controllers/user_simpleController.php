@@ -1,29 +1,27 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Symfony\Component\Console\Input\Input;
-use function Livewire\str;
 
-class ProviderController extends Controller
+class user_simpleController extends Controller
 {
     public function index()
     {
-        $provider = User::all();
-      return view ('provider.index')->with('provider', $provider);
+        $user = User::all();
+        return view ('user.index')->with('user', $user);
     }
 
 
     public function create()
     {
-        return view('provider.create');
+        return view('user.create');
     }
     public function store(Request $request)
     {
 
-       $request->all([
+        $request->all([
             'name' => 'required|string',
             'email' => 'required|string|unique:users,email',
             'password' => 'required|string|confirmed',
@@ -35,11 +33,11 @@ class ProviderController extends Controller
         ]);
 
 
-      User::create([
+        User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
-            'role_as' => $request->role_as ?? 'provider',
+            'role_as' => $request->role_as ?? 'user',
 
 
 
@@ -53,29 +51,29 @@ class ProviderController extends Controller
 
     public function show($id)
     {
-        $provider = User::find($id);
-        return view('provider.show')->with('provider', $provider);
+        $user = User::find($id);
+        return view('user.show')->with('provider', $user);
     }
 
 
     public function edit($id)
     {
-        $provider = User::find($id);
-        return view('provider.edit')->with('provider', $provider);
+        $user = User::find($id);
+        return view('user.edit')->with('provider', $user);
     }
 
 
     public function update(Request $request, $id)
     {
-        $provider = User::find($id);
+        $user = User::find($id);
         $input = $request->all();
-        $provider->update($input);
-        return redirect('provider')->with('flash_message', 'Provider Updated!');
+        $user->update($input);
+        return redirect('user')->with('flash_message', 'user Updated!');
     }
 
     public function destroy($id)
     {
         User::destroy($id);
-        return redirect('provider')->with('flash_message', 'Provider deleted!');
+        return redirect('user')->with('flash_message', 'user deleted!');
     }
 }

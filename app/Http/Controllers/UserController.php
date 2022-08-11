@@ -23,7 +23,8 @@ class UserController extends Controller
         $result= User::create([
             'name' => $request['name'],
             'email' => $request['email'],
-            'password' => bcrypt($request['password'])
+            'password' => bcrypt($request['password']),
+            'role_as' => $request->role_as ?? 'user',
         ]);
 
       //  $token = $user->createToken('myapptoken')->plainTextToken;
@@ -55,9 +56,9 @@ class UserController extends Controller
         }
 
         return response()->json([
-              'message'=>'the producted credentialsdo not much '  
+              'message'=>'the producted credentialsdo not much '
         ]);
-    
+
         }
 
         public function logout(Request $request) {

@@ -3,7 +3,6 @@
 
 
 
-
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -117,11 +116,10 @@
         <div id="collapseHandyman" class="collapse" aria-labelledby="headingamir"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">hand</a>
-                <a class="collapse-item" href="utilities-border.html">hand</a>
-                <a class="collapse-item" href="utilities-animation.html">hand</a>
-                <a class="collapse-item" href="utilities-other.html">hand</a>
+                <h6 class="collapse-header">Gestion Handyman :</h6>
+                <a class="collapse-item" href="handyman">Liste Handyman</a>
+                <a class="collapse-item" href="utilities-border.html">ajouter handyman</a>
+
             </div>
         </div>
     </li>
