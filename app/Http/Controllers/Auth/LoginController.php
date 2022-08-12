@@ -33,9 +33,21 @@ class LoginController extends Controller
         {
             return 'dashboard';
         }
+        if(Auth::user()->role_as == 'user'){
+            return 'user';
+
+        }
+        if(Auth::user()->role_as == 'provider'){
+            return 'provider';
+
+        }
+        if(Auth::user()->role_as == 'handyman'){
+            return 'handyman';
+
+        }
         else
         {
-            return 'home';
+            return 'welcome';
         }
     }
 

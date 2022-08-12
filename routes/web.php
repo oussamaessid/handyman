@@ -43,6 +43,25 @@ Route::group(['middleware'=>['auth','isAdmin']],function (){
     });
 
 });
+Route::group(['middleware'=>['auth','isUser']],function (){
+    Route::get('/user_create', function () {
+        return view('home');
+    });
+
+});
+
+Route::group(['middleware'=>['auth','isProvider']],function (){
+    Route::get('/provider', function () {
+        return view('welcome');
+    });
+
+});
+Route::group(['middleware'=>['auth','isHandyman']],function (){
+    Route::get('/handyman', function () {
+        return 'welcome';
+    });
+
+});
 
 
 

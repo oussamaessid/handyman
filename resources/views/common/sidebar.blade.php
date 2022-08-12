@@ -4,6 +4,7 @@
 
 
     <!-- Sidebar - Brand -->
+
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
@@ -32,21 +33,26 @@
 
      <!-- Nav Item - Pages Collapse Menu -->
 
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecategory"
-            aria-expanded="true" aria-controls="category">
-          <!--  <i class="fas fa-fw fa-cog"></i>-->
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Category</span>
-        </a>
-        <div id="collapsecategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">gestion Category:</h6>
-                <a class="collapse-item" href="category">liste category</a>
-                <a class="collapse-item" href="category/create">ajouter category</a>
+
+
+        <li  class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecategory"
+                aria-expanded="true" aria-controls="category">
+              <!--  <i class="fas fa-fw fa-cog"></i>-->
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Category</span>
+            </a>
+            <div id="collapsecategory" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">gestion Category:</h6>
+                    <a class="collapse-item" href="category">liste category</a>
+                    <a class="collapse-item" href="category/create">ajouter category</a>
+                </div>
             </div>
-        </div>
-    </li>
+        </li>
+
+
+
 
 
     <!-- Nav Item - Pages Collapse Menu -->
@@ -64,6 +70,7 @@
             </div>
         </div>
     </li>
+
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseservice"
