@@ -23,19 +23,13 @@
     </li>
 
 
-    <!-- Divider
+
     <hr class="sidebar-divider">
 
-    Heading
-    <div class="sidebar-heading">
-        Interface
-    </div> -->
-
-     <!-- Nav Item - Pages Collapse Menu -->
 
 
 
-        <li  class="nav-item">
+        <li  class="nav-item" @if(Auth::User()->role_as == 'user' or Auth::User()->role_as =='handyman') style="display: none" @endif >
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecategory"
                 aria-expanded="true" aria-controls="category">
               <!--  <i class="fas fa-fw fa-cog"></i>-->
@@ -56,7 +50,7 @@
 
 
     <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
+        <li class="nav-item"@if(Auth::User()->role_as == 'user' or  Auth::User()->role_as =='provider' or Auth::User()->role_as =='handyman' ) style="display: none" @endif >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSubCategory"
             aria-expanded="true" aria-controls="collapsePagestw">
             <i class="fas fa-fw fa-wrench"></i>
@@ -72,7 +66,7 @@
     </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
+        <li class="nav-item" @if(Auth::User()->role_as == 'user' or Auth::User()->role_as =='handyman') style="display: none" @endif >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseservice"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-folder"></i>
@@ -86,14 +80,9 @@
             </div>
         </div>
     </li>
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Plans</span></a>
-    </li>
+
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
+        <li class="nav-item"@if(Auth::User()->role_as == 'user' or Auth::User()->role_as =='provider' or Auth::User()->role_as =='handyman') style="display: none" @endif >
         <a class="nav-link collapsed" href="service" data-toggle="collapse" data-target="#collapseprovider"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-table"></i>
@@ -102,19 +91,19 @@
         <div id="collapseprovider" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">gestion services:</h6>
-                <a class="collapse-item" href="provider">liste providers</a>
+                <a class="collapse-item" href="provider-liste">liste providers</a>
                 <a class="collapse-item" href="provider/create">ajouter provider</a>
             </div>
         </div>
     </li>
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="#">
             <i class="fa fa-address-book" aria-hidden="true"></i>
             <span>Booking</span></a>
     </li>
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item"@if(Auth::User()->role_as == 'user' or Auth::User()->role_as =='handyman') style="display: none" @endif >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHandyman"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fa fa-users" aria-hidden="true"></i>
@@ -124,8 +113,8 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Gestion Handyman :</h6>
-                <a class="collapse-item" href="handyman">Liste Handyman</a>
-                <a class="collapse-item" href="utilities-border.html">ajouter handyman</a>
+                <a class="collapse-item" href="handyman-liste">Liste Handyman</a>
+                <a class="collapse-item" href="handyman/create">ajouter handyman</a>
 
             </div>
         </div>
@@ -141,7 +130,7 @@
 
 
     <!-- Nav Item - Charts -->
-    <li class="nav-item">
+    <li class="nav-item"@if(Auth::User()->role_as == 'user' or Auth::User()->role_as =='provider'  or Auth::User()->role_as =='handyman') style="display: none" @endif >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseuser"
            aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fa fa-users" aria-hidden="true"></i>
@@ -151,8 +140,8 @@
              data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="user">liste user</a>
-                <a class="collapse-item" href="user-register">ajouter user</a>>
+                <a class="collapse-item" href="user-liste">liste user</a>
+                <a class="collapse-item" href="user/create">ajouter user</a>>
             </div>
         </div>
     </li>
