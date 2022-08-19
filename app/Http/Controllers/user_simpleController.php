@@ -46,7 +46,7 @@ class user_simpleController extends Controller
         ]);
 
 
-        return redirect('provider')->with('flash_message', 'Provider Addedd!');
+        return redirect('user-liste')->with('flash_message', 'Provider Addedd!');
 
     }
 
@@ -70,12 +70,12 @@ class user_simpleController extends Controller
         $user = User::find($id);
         $input = $request->all();
         $user->update($input);
-        return redirect('user')->with('flash_message', 'user Updated!');
+        return redirect('user-liste')->with('flash_message', 'user Updated!');
     }
 
     public function destroy($id)
     {
         User::destroy($id);
-        return redirect('user')->with('flash_message', 'user deleted!');
+        return redirect('user-liste')->with('flash_message', 'user deleted!');
     }
 }

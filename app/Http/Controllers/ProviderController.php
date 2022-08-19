@@ -48,7 +48,7 @@ class ProviderController extends Controller
         ]);
 
 
-        return redirect('provider')->with('flash_message', 'Provider Addedd!');
+        return redirect('provider-liste')->with('flash_message', 'Provider Addedd!');
 
     }
 
@@ -72,12 +72,12 @@ class ProviderController extends Controller
         $provider = User::find($id);
         $input = $request->all();
         $provider->update($input);
-        return redirect('provider')->with('flash_message', 'Provider Updated!');
+        return redirect('provider-liste')->with('flash_message', 'Provider Updated!');
     }
 
     public function destroy($id)
     {
         User::destroy($id);
-        return redirect('provider')->with('flash_message', 'Provider deleted!');
+        return redirect('provider-liste')->with('flash_message', 'Provider deleted!');
     }
 }

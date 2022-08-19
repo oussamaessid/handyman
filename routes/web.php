@@ -20,9 +20,13 @@ Route::resource('/provider-liste', App\Http\Controllers\ProviderController::clas
 Route::resource('/subcategory', App\Http\Controllers\SubCategoryController::class);
 Route::resource('/category', App\Http\Controllers\CategoryController::class);
 Route::resource('/service', App\Http\Controllers\ServiceController::class);
-Route::get('/provider/create','App\Http\Controllers\ProviderController@create');
-Route::get('/user/create','App\Http\Controllers\user_simpleController@create');
-Route::get('/handyman/create','App\Http\Controllers\HandymanController@create');
+Route::get('/provider-create','App\Http\Controllers\ProviderController@create');
+Route::get('/user-create','App\Http\Controllers\user_simpleController@create');
+Route::get('/handyman-create','App\Http\Controllers\HandymanController@create');
+Route::get('/service-create','App\Http\Controllers\ServiceController@create');
+Route::get('/category-create','App\Http\Controllers\CategoryController@create');
+Route::get('/subcategory-create','App\Http\Controllers\SubCategoryController@create');
+
 Route::resource('/user-liste', App\Http\Controllers\user_simpleController::class);
 Route::resource('/handyman-liste', App\Http\Controllers\HandymanController::class);
 

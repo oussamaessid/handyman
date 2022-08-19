@@ -3,7 +3,7 @@
 
 
 <div class="card">
-  <div class="card-header">Services Page</div>
+  <div class="card-header">Provider Page</div>
   <div class="card-body">
 
 
