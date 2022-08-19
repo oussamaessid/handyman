@@ -1,10 +1,10 @@
-@extends('subcategory.layout')
+@extends('layouts.master')
 @section('content')
- 
+
 <div class="card">
   <div class="card-header">subcategory Page</div>
   <div class="card-body">
-      
+
       <form action="{{ url('subcategory/' .$subcategory->id) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
@@ -15,8 +15,8 @@
         <input type="text" name="address" id="address" value="{{$subcategory->address}}" class="form-control"></br>
         <input type="submit" value="Update" class="btn btn-success"></br>
     </form>
-   
+
   </div>
 </div>
- 
+
 @stop

@@ -1,4 +1,4 @@
-@extends('user.layout')
+@extends('layouts.master')
 @section('content')
     <div class="container">
         <div class="row">
@@ -12,7 +12,7 @@
                         </a>
                         <br/>
                         <br/>
-                        <div class="table-responsive">
+                        <div class="table-responsive" >
                             <table class="table">
                                 <thead>
                                 <tr>

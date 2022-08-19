@@ -10,7 +10,9 @@ class user_simpleController extends Controller
     public function index()
     {
         $user = User::all();
-        return view ('user.index')->with('user', $user);
+        $users = User::where('role_as','user')->get();
+
+        return view ('user.index',compact('users'))->with('user', $user);
     }
 
 

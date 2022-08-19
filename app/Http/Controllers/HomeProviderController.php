@@ -38,7 +38,7 @@ class HomeController extends Controller
         $handyman = User::where('role_as','handyman')->count();
 
 
-         return view('home', compact('category','service','subcategory','users','admins','provider','handyman'));
+         return view('homeprovider', compact('category','service','subcategory','users','admins','provider','handyman'));
 
     }
 }

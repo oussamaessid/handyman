@@ -17,7 +17,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/home">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -96,6 +96,14 @@
             </div>
         </div>
     </li>
+
+    <!-- Nav Item - calender -->
+    <li class="nav-item">
+        <a class="nav-link" href="fullcalender">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            <span>Calender</span></a>
+    </li>
+
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="#">
@@ -141,7 +149,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Utilities:</h6>
                 <a class="collapse-item" href="user-liste">liste user</a>
-                <a class="collapse-item" href="user/create">ajouter user</a>>
+                <a class="collapse-item" href="user/create">ajouter user</a>
             </div>
         </div>
     </li>

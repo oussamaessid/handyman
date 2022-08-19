@@ -11,7 +11,9 @@ class HandymanController extends Controller
     public function index()
     {
         $handyman = User::all();
-        return view ('handyman.index')->with('handyman', $handyman);
+        $users = User::where('role_as','handyman')->get();
+
+        return view ('handyman.index',compact('users'))->with('handyman', $handyman);
     }
 
 

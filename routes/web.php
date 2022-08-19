@@ -20,14 +20,14 @@ Route::resource('/provider-liste', App\Http\Controllers\ProviderController::clas
 Route::resource('/subcategory', App\Http\Controllers\SubCategoryController::class);
 Route::resource('/category', App\Http\Controllers\CategoryController::class);
 Route::resource('/service', App\Http\Controllers\ServiceController::class);
-Route::get('provider/create','App\Http\Controllers\ProviderController@create');
-Route::get('user/create','App\Http\Controllers\user_simpleController@create');
-Route::get('handyman/create','App\Http\Controllers\HandymanController@create');
-Route::resource('/user-liste', App\Http\Controllers\user_simpleController::class,);
+Route::get('/provider/create','App\Http\Controllers\ProviderController@create');
+Route::get('/user/create','App\Http\Controllers\user_simpleController@create');
+Route::get('/handyman/create','App\Http\Controllers\HandymanController@create');
+Route::resource('/user-liste', App\Http\Controllers\user_simpleController::class);
 Route::resource('/handyman-liste', App\Http\Controllers\HandymanController::class);
 
-
-
+Route::get('/fullcalender', [ App\Http\Controllers\FullCalenderController::class, 'index']);
+Route::post('fullcalenderAjax', [App\Http\Controllers\FullCalenderController::class, 'ajax']);
 
 Route::get('/', function () {
     return view('auth.login');
@@ -41,7 +41,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //});
 Route::group(['middleware'=>['auth','isAdmin']],function (){
     Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+        return view('home');
     });
 
 });
@@ -53,10 +53,11 @@ Route::group(['middleware'=>['auth','isUser']],function (){
 });
 
 Route::group(['middleware'=>['auth','isProvider']],function (){
-    Route::get('/provider', function () {
-        return view('welcome');
-    });
+   // Route::get('/provider', function () {
+      //  return view('home');
 
+  //  });
+  Route::get('/homeprovider', [App\Http\Controllers\HomeProviderController::class, 'index']);
 });
 Route::group(['middleware'=>['auth','isHandyman']],function (){
     Route::get('/handyman', function () {

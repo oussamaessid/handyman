@@ -1,8 +1,8 @@
-@extends('category.layout')
+@extends('layouts.master')
 @section('content')
     <div class="container">
         <div class="row">
- 
+
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">category</div>
@@ -28,12 +28,12 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->address }}</td>
-                                        
- 
+
+
                                         <td>
                                             <a href="{{ url('/category/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/category/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
- 
+
                                             <form method="POST" action="{{ url('/category' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
@@ -45,7 +45,7 @@
                                 </tbody>
                             </table>
                         </div>
- 
+
                     </div>
                 </div>
             </div>

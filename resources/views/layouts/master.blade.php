@@ -35,6 +35,8 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
 
 <body id="page-top">
@@ -54,7 +56,7 @@
 
                 <!-- Topbar -->
                 @include('common.header')
-                
+
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -107,6 +109,7 @@
     </div>
 <div>
 
+
 <script>
     $(document).ready(function(){
         $("#selector").change(function(){
@@ -134,6 +137,8 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('admin/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('admin/js/demo/chart-pie-demo.js')}}"></script>
+
+
 
 </body>
 
