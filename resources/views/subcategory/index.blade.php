@@ -17,6 +17,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Category</th>
                                         <th>Name</th>
                                         <th>Address</th>
                                         <th>Actions</th>
@@ -26,6 +27,7 @@
                                 @foreach($subcategory as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->category->name }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->address }}</td>
 

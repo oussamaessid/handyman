@@ -9,5 +9,10 @@ class Service extends Model
 {
     protected $table = 'service';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'address'];
+    protected $fillable = ['name', 'address','user_id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id', 'id');
+    }
 }

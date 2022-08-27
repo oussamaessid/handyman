@@ -5,6 +5,7 @@
   <div class="card-header">category Page</div>
   <div class="card-body">
 
+
       <form action="{{ url('category/' .$category->id) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")

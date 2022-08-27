@@ -7,10 +7,15 @@ use Illuminate\Http\Request;
 
 class user_simpleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $user = User::all();
         $users = User::where('role_as','user')->get();
+        $user = User::find($request->user_id);
+        $user->status = $request->status('ban');
+        $user->save();
+
+        return response()->json(['success'=>'User status change successfully.']);
 
         return view ('user.index',compact('users'))->with('user', $user);
     }
@@ -27,22 +32,12 @@ class user_simpleController extends Controller
             'name' => 'required|string',
             'email' => 'required|string|unique:users,email',
             'password' => 'required|string|confirmed',
-
-
-
-
-
         ]);
-
-
         User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
             'role_as' => $request->role_as ?? 'user',
-
-
-
         ]);
 
 
@@ -78,4 +73,11 @@ class user_simpleController extends Controller
         User::destroy($id);
         return redirect('user-liste')->with('flash_message', 'user deleted!');
     }
+
+    public function changeStatus(Request $request)
+    {
+
+
+    }
+
 }

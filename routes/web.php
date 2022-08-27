@@ -33,13 +33,20 @@ Route::resource('/handyman-liste', App\Http\Controllers\HandymanController::clas
 Route::get('/fullcalender', [ App\Http\Controllers\FullCalenderController::class, 'index']);
 Route::post('fullcalenderAjax', [App\Http\Controllers\FullCalenderController::class, 'ajax']);
 
+Route::get('changeStatus', 'App\Http\Controllers\user_simpleController@index')->name('index');
+
+
+
 Route::get('/', function () {
     return view('auth.login');
 });
 
 Auth::routes();
 
+
+Route::group(['middleware'=>['auth','isban']],function (){
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
 //Route::get('/amir', function (){
 //   return view('provider.create') ;
 //});
@@ -57,11 +64,10 @@ Route::group(['middleware'=>['auth','isUser']],function (){
 });
 
 Route::group(['middleware'=>['auth','isProvider']],function (){
-   // Route::get('/provider', function () {
-      //  return view('home');
+    Route::get('/provider', function () {
+    return view('home');
 
-  //  });
-  Route::get('/homeprovider', [App\Http\Controllers\HomeProviderController::class, 'index']);
+    });
 });
 Route::group(['middleware'=>['auth','isHandyman']],function (){
     Route::get('/handyman', function () {

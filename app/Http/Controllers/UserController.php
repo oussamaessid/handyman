@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
@@ -27,7 +28,6 @@ class UserController extends Controller
             'password' => bcrypt($request['password']),
             'role_as' => $request->role_as ?? 'admin',
         ]);
-
       //  $token = $user->createToken('myapptoken')->plainTextToken;
 
       //  $response = [
@@ -69,4 +69,6 @@ class UserController extends Controller
 
             return response()->json(['message'=>'success' ]);
         }
+
+
 }

@@ -29,7 +29,7 @@
 
 
 
-        <li  class="nav-item" @if(Auth::User()->role_as == 'user' or Auth::User()->role_as =='handyman') style="display: none" @endif >
+        <li  class="nav-item" @if(Auth::User()->role_as == 'user'   or Auth::User()->role_as =='handyman') style="display: none" @endif >
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecategory"
                 aria-expanded="true" aria-controls="category">
               <!--  <i class="fas fa-fw fa-cog"></i>-->

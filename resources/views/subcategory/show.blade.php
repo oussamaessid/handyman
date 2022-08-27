@@ -8,6 +8,7 @@
 
 
         <div class="card-body">
+        <p class="card-text">Address : {{ $category->name }}</p>
         <h5 class="card-title">Name : {{ $subcategory->name }}</h5>
         <p class="card-text">Address : {{ $subcategory->address }}</p>
 

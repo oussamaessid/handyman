@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\Profil;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\Console\Input\Input;
@@ -29,24 +31,20 @@ class ProviderController extends Controller
             'name' => 'required|string',
             'email' => 'required|string|unique:users,email',
             'password' => 'required|string|confirmed',
-
-
-
-
-
         ]);
 
 
-      User::create([
+        $user =User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
             'role_as' => $request->role_as ?? 'provider',
-
-
-
         ]);
-
+        Profil::create([
+            'prenom' => $request['prenom'],
+            'age' => $request['age'],
+            'user_id'=>$user->id
+        ]);
 
         return redirect('provider-liste')->with('flash_message', 'Provider Addedd!');
 

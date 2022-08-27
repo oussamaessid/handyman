@@ -5,12 +5,16 @@
         <div class="card-header">subcategory Page</div>
         <div class="card-body">
 
-            <form action="{{ url('provider-liste/' .$provider->id) }}" method="post">
+            <form action="{{ url('provider-liste' .$provider->id) }}" method="post">
                 {!! csrf_field() !!}
                 @method("PATCH")
                 <input type="hidden" name="id" id="id" value="{{$provider->id}}" id="id" />
                 <label>Name</label></br>
                 <input type="text" name="name" id="name" value="{{$provider->name}}" class="form-control"></br>
+                <label>Prenom</label></br>
+                <input type="text" name="prenom" id="prenom" class="form-control"></br>
+                <label>Age</label></br>
+                <input type="text" name="age" id="age" class="form-control"></br>
                 <label>Address</label></br>
                 <input type="text" name="email" id="ademaildress" value="{{$provider->email}}" class="form-control"></br>
                 <input type="submit" value="Update" class="btn btn-success"></br>

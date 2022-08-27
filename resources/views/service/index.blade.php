@@ -18,6 +18,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>user</th>
                                         <th>address</th>
                                         <th>Actions</th>
                                     </tr>
@@ -27,6 +28,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
+                                        <td>{{ $item->user->name }}</td>
                                         <td>{{ $item->address }}</td>
 
 

@@ -20,6 +20,8 @@
                                     <th>Name</th>
                                     <th>email</th>
                                     <th>role</th>
+                                    <th>status</th>
+                                    <th class="text-centre">on/off</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -30,9 +32,22 @@
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->email }}</td>
                                         <td>{{ $item->role_as }}</td>
+                                        <td> <input  type="checkbox" class="toggle-class" data-id="{{ $item->id }}" onclick="return confirm('Are you Sure?')" data-toggle="toggle" data-style="slow" data-on="Enabled" data-off="Disabled" {{ $item->status == true ? 'checked' : ''}}></td>
 
+                                        <td class="text-centre">
+                                            @if ($item->isUserOnline())
+                                                <li class="text-success">
+                                                    Online
+                                                </li>
+                                            @else
+                                                <li class="text-warning">
+                                                   Offline
+                                               </li>
+                                            @endif
+                                        </td>
 
                                         <td>
+
                                             <a href="{{ url('/user-liste'. '/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/user-liste'. '/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
@@ -54,3 +69,44 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+
+<script>
+  $(function() {
+    $('#toggle-two').bootstrapToggle({
+      on: 'Enabled',
+      off: 'Disabled'
+    });
+  })
+</script>
+
+
+<script>
+    $(document).ready(function(){
+    $('.toggle-class').on('change', function() {
+        var status = $(this).prop('checked') == true ? 1 : 0;
+        var user_id = $(this).data('id');
+        $.ajax({
+            type: 'GET',
+            dataType: 'JSON',
+            url: '{{ route('changeStatus') }}',
+            data: {
+                'status': status,
+                'user_id': user_id
+            },
+            success:function(data) {
+                $('#notifDiv').fadeIn();
+                $('#notifDiv').css('background', 'green');
+                $('#notifDiv').text('Status Updated Successfully');
+                setTimeout(() => {
+                    $('#notifDiv').fadeOut();
+                }, 3000);
+            }
+        });
+    });
+});
+</script>
+
+
+@endpush

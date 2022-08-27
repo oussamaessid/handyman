@@ -5,6 +5,7 @@
   <div class="card-header">category Page</div>
   <div class="card-body">
 
+
       <form action="{{ url('category') }}" method="post">
         {!! csrf_field() !!}
         <label>Name</label></br>

@@ -37,6 +37,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\UserActivity::class,
+
         ],
 
         'api' => [
@@ -68,9 +70,7 @@ class Kernel extends HttpKernel
         "isUser"=>\App\Http\Middleware\UserMiddleware::class,
         "isHandyman"=>\App\Http\Middleware\HandymanMiddleware::class,
         "isProvider"=>\App\Http\Middleware\ProviderMiddleware::class,
-
-
-
+        "isban"=>\App\Http\Middleware\CheckBanned::class,
 
     ];
 }

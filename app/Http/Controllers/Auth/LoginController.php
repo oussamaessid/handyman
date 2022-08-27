@@ -28,28 +28,28 @@ class LoginController extends Controller
      * @var string
      */
   // protected $redirectTo = RouteServiceProvider::HOME;
-    public function redirectTo(){
-        if(Auth::user()->role_as == 'admin')
-        {
-            return 'dashboard';
-        }
-        if(Auth::user()->role_as == 'user'){
-            return 'user';
+ //   public function redirectTo(){
+ //       if(Auth::user()->role_as == 'admin' && Auth::user()->status == '0' )
+   //     {
+  //          return 'home';
+ //       }
+  //      if(Auth::user()->role_as == 'user' && Auth::user()->status == '0' ){
+ //           return 'user';
+//
+ //       }
+  //      if(Auth::user()->role_as == 'provider' && Auth::user()->status == '0' ){
+  //          return 'provider';
 
-        }
-        if(Auth::user()->role_as == 'provider'){
-            return 'provider';
+   //     }
+   //     if(Auth::user()->role_as == 'handyman' && Auth::user()->status == '0' ){
+   //         return 'handyman';
 
-        }
-        if(Auth::user()->role_as == 'handyman'){
-            return 'handyman';
-
-        }
-        else
-        {
-            return 'welcome';
-        }
-    }
+   //     }
+   //     else
+  //      {
+   //         response()->json(['success'=>'User status change successfully.']);
+  //      }
+  //  }
 
     /**
      * Create a new controller instance.
@@ -60,4 +60,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
 }

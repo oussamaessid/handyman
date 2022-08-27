@@ -12,7 +12,7 @@
  */
 
  @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
- 
+
 :root {
   --blue: #4e73df;
   --indigo: #6610f2;
@@ -11356,3 +11356,18 @@ footer.sticky-footer .copyright {
 [data-theme="dark"] .bg-white {
   background-color: #000 !important;
 }
+
+#notifDiv {
+    z-index:10000;
+     display: none;
+     background: green;
+     font-weight: 450;
+     width: 350px;
+     position: fixed;
+     top: 80%; left: 5%;
+     color: white;
+     padding: 5px 20px
+}
+
+.slow  .toggle-group {
+     transition: left 0.7s; -webkit-transition: left 0.7s; }
